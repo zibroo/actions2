@@ -47,6 +47,11 @@ jobs:
     - name: Terraform Select Workspace
       run: |
         terraform workspace select $( if [[ "${{steps.extract_branch.outputs.branch}}" == "master" ]] ; then echo "prod" ; elif [[ "${{steps.extract_branch.outputs.branch}}" == "stage" ]] ; then echo "stage" ; elif [[ "${{steps.extract_branch.outputs.branch}}" == "dev" ]] ; then echo "dev" ; fi )
+
     - name: Terraform Plan 
       run: |
         terraform plan -input=false
+
+    - name: Terraform Apply
+      run: |
+        terraform apply --auto-approve -input=false

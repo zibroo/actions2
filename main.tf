@@ -27,7 +27,7 @@ resource "aws_instance" "dev" {
   tags = {
     Name  = "dev-ec2"
     ci-cd = "Github actions"
-    new   = "tag"
+    new   = "tags"
   }
 }
 
@@ -51,6 +51,6 @@ resource "aws_instance" "prod" {
   tags = {
     Name  = "prod-ec2"
     ci-cd = "Github actions"
-    new   = "tags"
+    new   = "tagss"
   }
 }
