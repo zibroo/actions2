@@ -39,7 +39,7 @@ resource "aws_instance" "stage" {
   tags = {
     Name  = "stage-ec2"
     ci-cd = "Github actions"
-    new   = "tag"
+    new   = "tags"
   }
 }
 
