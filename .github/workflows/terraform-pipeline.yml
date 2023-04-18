@@ -1,8 +1,8 @@
 name: "Provisioning Infrastructure"
 
-# on:
-#   push:
-#     branches: ["master","dev","stage"]
+on:
+  push:
+    branches: ["master","dev","stage"]
 
 permissions:
   id-token: write
